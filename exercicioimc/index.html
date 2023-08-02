@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC WEB</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="reset.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="header">
+        <div class="content-header">
+            <img src="img/logo.png" alt="foto da logo">
+        </div>
+    </div>
+    
+    <div class="content">
+        <h1>Calcule seu IMC</h1>
+        <p>IMC é a sigla para Índice de Massa Corporal, parâmetro adotado pela Organização Mundial de Saúde para calcular o peso ideal de cada pessoa. </p>
+        <p>Quer descobrir seu IMC? Insira seu peso e sua altura nos campos abaixo e compare com os índices da tabela. Importante: siga os exemplos e use pontos como separadores.</p>
+
+        <div class="flex-content">
+
+            <div class="table">
+                <table>
+                    <thead>
+                        <tr>
+                        <td>IMC</td>
+                        <td>Classificação</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Menor que 18.5</td>
+                            <td>Magreza</td>
+                        </tr>
+                        <tr>
+                            <td class="td-normal">Entre 18.5 e 24.9</td>
+                            <td class="td-normal">Normal</td>
+                        </tr>
+                        <tr>
+                            <td>Entre 25.0 e 29.9</td>
+                            <td>Sobrepeso</td>
+                        </tr>
+                        <tr>
+                            <td>Maior que 29.9</td>
+                            <td>Obesidade</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <form action="#">
+
+                <label for="altura">Altura:</label> <br>
+                <input type="tel" id="altura" data-mask="0.00">
+
+                <br>
+
+                <label for="peso">Peso:</label> <br>
+                <input type="tel" id="peso" data-mask="000.00" data-mask-reverse="true">
+
+                <br>
+
+                <button type="button" id="btn">Calcular</button>
+
+            </form>
+
+            <div class="result">
+                <p>Seu IMC: <br> <strong id="msgImc"></strong> </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Projeto desenvolvido pela Coti Informática</p>
+    </div>
+
+    <!-- Ligação entre HTML e JS -->
+    <script src="js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    
+</body>
+</html>
